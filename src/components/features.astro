@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Asesoria y administracion de nube",
+    description:
+      "Ya sea Amazon Web Services, Google Cloud o Microsoft Azure te guiamos y asesoramos en la administracion de tus recursos en la nube.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Desarrollo de software",
+    description:
+      "Desarrollo de soluciones a la medida con las mejores tecnologias.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Reclutamiento de recursos offshore",
+    description:
+      "Buscamos al mejor talento para tu equipo de desarrollo en la region",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Soluciones de cadena de bloques",
+    description:
+      "Integramos tu negocio de agricultura, salud o gobierno a sistemas verificables de trazabilidad en cadena de bloques.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Almacenamiento y datos personales",
+    description:
+      "Nos aseguramos de seguir regulaciones de proteccion de datos personales para que tus soluciones esten a la vanguardia",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Inteligencia artificial",
+    description:
+      "Valoramos las nuevas tendencias y te ayudamos a entender donde y cuando implementar caracteristicas de IA en tus soluciones.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Servicios
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Nuestro catalogo de servicios incluye.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
